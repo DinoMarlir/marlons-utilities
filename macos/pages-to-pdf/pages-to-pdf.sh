@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Adjust paths
-read -p "Enter the path to the input folder (e.g., /Users/marlonroder/Downloads/Steckbriefe): " input_folder
-read -p "Enter the path to the output folder (e.g., /Users/marlonroder/Downloads/Steckbriefe/output): " output_folder
+input_folder="/Users/myuser/documents/"  # Current folder
+output_folder="/Users/myuser/output/output"  # Folder for PDF files
 
 # Iterate through all Pages files in the input folder
 for pages_file in "$input_folder"/*.pages; do
@@ -14,6 +14,3 @@ for pages_file in "$input_folder"/*.pages; do
 done
 
 echo "All Pages files have been successfully converted to PDF!"
-
-# Wait for user input before exiting the script
-read -p "Press Enter to continue..."
